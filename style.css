@@ -1,0 +1,381 @@
+/* RESETTING */
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* GENERAL LAYOUT */
+
+body {
+  height: 100vh;
+  background-color: #8cc461;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.flow-content > *{
+    margin-top: 2rem;
+}
+
+button{
+    width: 119px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    color:inherit;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    cursor: pointer;
+}
+.elipse-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* COMPONENTS */
+/* This is the main Component */
+
+.main-container {
+  width: 60%;
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* This area is result scoring area */
+
+.top-container {
+  width: 100%;
+  height: 28%;
+  border-radius: 13px;
+  border: 2px solid #fff;
+  background: rgba(28, 48, 120, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left-container{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+.top-right-container{
+    width: 300px;
+    height: 80%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-right-container-card{
+    width: 130px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+}
+
+.top-right-container-card h2{
+    margin-top: 0.5rem;
+    color: #656565;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    text-align: center;
+    list-style: none;
+}
+
+.top-right-container-card h1{
+    color: #252525;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* This whole area is game playing area */
+
+.bottom-container {
+  width: 100%;
+  height: 45%;
+  margin-bottom: 50px;
+}
+
+.bottom-game-container {
+  width: 352px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-game-container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.img-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.img{
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.img1{
+    background: url(image/fist.png);
+    background-repeat: no-repeat;
+}
+
+.img2{
+    background: url(image/scissor.png);
+    background-repeat: no-repeat;
+    left: 60px;
+}
+
+.img3{
+    background: url(image/hand.png);
+    background-repeat: no-repeat;
+}
+
+.bottom-game-container-bottom{
+    align-self: center;
+    position: relative;
+}
+
+.line{
+    position: absolute;
+    z-index: -1;
+    left: 30px;
+    width: 200px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.64);
+}
+
+.bottom-game-container-bottom .line1{
+    transform: rotate(120deg);
+}
+
+.bottom-game-container-bottom .line2{
+    top:-50px;
+    left: -90px;
+    transform: rotate(60deg);
+}
+
+/* This whole area is result showing area either loose or win */
+
+.bottom-result-container {
+  display: none;
+  width: 85%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.elipse5{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 350px;
+    background: rgba(46, 154, 37, 0.39);
+    box-shadow: 0px 1px 62px 0px rgba(0, 0, 0, 0.13);
+}
+
+.elipse4{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    background: rgba(29, 168, 43, 0.79);
+}
+
+.elipse3{
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    background:#289a27;;
+}
+
+.div1, .div3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.div1 li,.div3 li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    z-index: 2;
+}
+
+.div1 svg{
+    z-index: 2;
+}
+.div2{
+    text-align: center;
+    line-height: 1.4;
+}
+
+.div2 h1{  
+    font-size: 39px;
+    font-weight: 800;
+    letter-spacing: 3.9px;
+}
+
+.div2 h2{
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    line-height: 1.4;
+}
+
+.div2 button{
+    width: 174px;
+    height: 44px;
+    border: none;
+    color: #6B6B6B;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    background: #fff;
+}
+
+/* This area is Rules and Next button area and showing rule card*/
+
+.rules-next{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+}
+
+.rules-next a{
+    display: none;
+    color: inherit;
+}
+
+.rules-card{
+    display: none;
+    position: fixed;
+    right: 50px;
+    bottom:90px;
+    width: 278px;
+    height: 325px;
+    border-radius: 13px;
+    border: 7px solid #FFF;
+    background: #004429;
+    z-index: 200;
+}
+
+.rules-card h1{
+    text-align: center;
+    font-size: 29px;
+    font-weight: 900;
+}
+
+.rules-card ul{
+    font-size: 13px;
+    font-weight: 500;
+    list-style: none;
+}
+
+.rules-card ul li{
+    margin: 15px 0px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+
+.rules-card ul li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #FFD600;;
+}
+
+.rules-card div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 36px;
+    bottom: 390px;
+    cursor: pointer;
+}
+
+.rules-card div h1{
+    font-size: 44px;
+    font-weight: 900;
+    font-family: Dangrek;
+    position: absolute;
+}
+
+/* THIS IS WON GAME PAGE */
+
+.won-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.won-game div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.won-game div img:last-child{
+    position: absolute;
+    top : 100px
+}
+
+.won-game h1{
+    font-size: 91px;
+    font-weight: 900;
+    letter-spacing: 9.1px;
+}
+
+.won-game h2{
+    font-size: 41px;
+    font-weight: 700;
+    letter-spacing: 4.1px;
+}
+
+.won-game button{
+    padding: 10px;
+    width: auto;
+    height: auto;
+    color: #6B6B6B;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background-color: #FFF;
+}

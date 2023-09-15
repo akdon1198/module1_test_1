@@ -1,12 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Dangrek&family=Delius+Unicase&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <!-- This is the main container for score and game -->
+    <div class="main-container flow-content">
+        <!-- This is result scoring area -->
+        <div class="top-container">
+            <div class="top-left-container">
+                <li>ROCK</li>
+                <li>PAPER</li>
+                <li>SCISSORS</li>
+            </div>
+            <div class="top-right-container">
+                <div class="top-right-container-card pcscore">
+                    <h2>
+                        <li>COMPUTER</li>
+                        <li>SCORE</li>
+                    </h2>
+                    <h1>0</h1>
+                </div>
+                <div class="top-right-container-card userscore">
+                    <h2>
+                        <li>YOUR</li>
+                        <li>SCORE</li>
+                    </h2>
+                    <h1>0</h1>
+                </div>
+            </div>
+        </div>
+        <!-- This is game and result container -->
+        <div class="bottom-container">
+            <!-- This is game container -->
+            <div class="bottom-game-container">
+                <div class="bottom-game-container-top">
+                    <div class="gameicon img-container 0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="164" height="164" viewBox="0 0 164 164"
+                            fill="none">
+                            <g filter="url(#filter0_i_1486_12)">
+                                <circle cx="83" cy="81" r="55" fill="white" />
+                            </g>
+                            <g filter="url(#filter1_d_1486_12)">
+                                <circle cx="83" cy="81" r="63" stroke="#0074B6" stroke-width="16"
+                                    shape-rendering="crispEdges" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_i_1486_12" x="28" y="26" width="113" height="110"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                        result="effect1_innerShadow_1486_12" />
+                                    <feOffset dx="3" />
+                                    <feGaussianBlur stdDeviation="10.5" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1486_12" />
+                                </filter>
+                                <filter id="filter1_d_1486_12" x="0" y="0" width="164" height="164"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="1" />
+                                    <feGaussianBlur stdDeviation="5.5" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_1486_12" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1486_12"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <div class="img img1"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="gameicon img-container 1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="164" height="164" viewBox="0 0 164 164"
+                            fill="none">
+                            <g filter="url(#filter0_i_1486_15)">
+                                <circle cx="83" cy="81" r="55" fill="white" />
+                            </g>
+                            <g filter="url(#filter1_d_1486_15)">
+                                <circle cx="83" cy="81" r="63" stroke="#BD00FF" stroke-width="16"
+                                    shape-rendering="crispEdges" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_i_1486_15" x="28" y="26" width="113" height="110"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                        result="effect1_innerShadow_1486_15" />
+                                    <feOffset dx="3" />
+                                    <feGaussianBlur stdDeviation="10.5" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1486_15" />
+                                </filter>
+                                <filter id="filter1_d_1486_15" x="0" y="0" width="164" height="164"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="1" />
+                                    <feGaussianBlur stdDeviation="5.5" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_1486_15" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1486_15"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <div class="img img2"></div>
+                    </div>
+                </div>
+                <div class="bottom-game-container-bottom">
+                    <div class="line line1"></div>
+                    <div class="gameicon img-container 2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="164" height="164" viewBox="0 0 164 164"
+                            fill="none">
+                            <g filter="url(#filter0_i_1486_9)">
+                                <circle cx="83" cy="81" r="55" fill="white" />
+                            </g>
+                            <g filter="url(#filter1_d_1486_9)">
+                                <circle cx="83" cy="81" r="63" stroke="#FFA943" stroke-width="16"
+                                    shape-rendering="crispEdges" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_i_1486_9" x="28" y="26" width="113" height="110"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                        result="effect1_innerShadow_1486_9" />
+                                    <feOffset dx="3" />
+                                    <feGaussianBlur stdDeviation="10.5" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1486_9" />
+                                </filter>
+                                <filter id="filter1_d_1486_9" x="0" y="0" width="164" height="164"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="1" />
+                                    <feGaussianBlur stdDeviation="5.5" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_1486_9" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1486_9"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <div class="img img3"></div>
+                    </div>
+                    <div class="line line2"></div>
+                </div>
+            </div>
+            <!-- This is result container either loose or win-->
+            <div class="bottom-result-container">
+                <div class="div1">
+                    <li>YOU Picked</li>
+                    <div class="elipse-wrapper">
+                        <div class="elipse-wrapper elipse5 user">
+                            <div class="elipse-wrapper elipse4">
+                                <div class="elipse3"></div>
+                            </div>
+                        </div>
+                        <div class="resulticon img-container"></div>
+                    </div>
+                </div>
+                <div class="div2">
+                    <!-- here shown either you loose or win -->
+                    <h1></h1>
+                    <h2></h2>
+                    <button></button>
+                </div>
+                <div class="div3">
+                    <li>PC Picked</li>
+                    <div>
+                        <div class="elipse-wrapper">
+                            <div class="elipse-wrapper elipse5 pc">
+                                <div class="elipse-wrapper elipse4">
+                                    <div class="elipse3"></div>
+                                </div>
+                            </div>
+                            <div class="resulticon img-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the rules and next button area -->
+    <div class="rules-next">
+        <button>Rules</button>
+        <a href="hurray.html"><button>Next</button></a>
+    </div>
+    <!-- This is the rules card -->
+    <div class="rules-card">
+        <h1>Game Rules</h1>
+        <ul>
+            <li>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+                Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                scissors.”
+            </li>
+            <li>
+                Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+            </li>
+            <li>
+                If both players lay down the same hand, each player lays down another hand
+            </li>
+        </ul>
+        <div>
+            <h1>X</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="27.5" fill="#FF0000" stroke="white" stroke-width="5" />
+            </svg>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script src="commonscript.js">  </script>
 </body>
+
 </html>
