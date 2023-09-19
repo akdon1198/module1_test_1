@@ -47,17 +47,17 @@ gameicon.forEach(gameiconelement => {
             win.style.display = "none"
             loose.style.display = "flex"
             win_or_lost_shown.children[0].textContent = "YOU LOST"
-            userandpcscore.user += 1
-            localStorage.setItem("user", JSON.stringify(userandpcscore.user))
-            userscore.textContent = userandpcscore.user
+            userandpcscore.pc += 1
+            localStorage.setItem("pc", JSON.stringify(userandpcscore.pc))
+            pcscore.textContent = userandpcscore.pc
         }else if(result == "win"){
             loose.style.display = "none"
             win.style.display = "flex"
             win_or_lost_shown.children[0].textContent = "YOU WIN"
             console.log(win_or_lost_shown.children[0]);
-            userandpcscore.pc += 1 
-            localStorage.setItem("pc", JSON.stringify(userandpcscore.pc))
-            pcscore.textContent = userandpcscore.pc
+            userandpcscore.user += 1 
+            localStorage.setItem("user", JSON.stringify(userandpcscore.user))
+            userscore.textContent = userandpcscore.user
             nextshowingbutton[1].style.display = "block"
         }else{
             loose.style.display = "none";
